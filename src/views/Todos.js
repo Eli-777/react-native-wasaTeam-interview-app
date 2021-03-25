@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: "600"
+    fontWeight: "600",
   },
   list: {
     margin: 20,
@@ -57,5 +57,5 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 10,
-  }
+  },
 });

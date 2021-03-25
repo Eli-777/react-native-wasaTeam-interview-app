@@ -1,14 +1,13 @@
 import "react-native-gesture-handler";
 
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeScreen from "./src/views/Homescreen";
 import Todos from "./src/views/Todos";
+import DrawerNav from "./src/drawer/DrawerNav";
 
-// const Tab = createTabNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -18,10 +17,10 @@ export default function App() {
         tabBarOptions={{
           labelStyle: {
             fontSize: 16,
-          },  
+          },
         }}
       >
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={DrawerNav} />
         <Tab.Screen name="Todos" component={Todos} />
       </Tab.Navigator>
     </NavigationContainer>

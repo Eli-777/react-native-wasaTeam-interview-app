@@ -1,10 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import ToggleButton from "../components/ToggleButton";
 
-function Homescreen(props) {
+function Homescreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>this is homescreen</Text>
+      <Text style={styles.title}>Homescreen</Text>
+      <ToggleButton
+        title="Toggle drawer"
+        onPress={() => navigation.toggleDrawer()}
+      />
     </View>
   );
 }
@@ -17,5 +22,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  title: {
+    fontSize: 40,
+    margin: 8,
   },
 });
